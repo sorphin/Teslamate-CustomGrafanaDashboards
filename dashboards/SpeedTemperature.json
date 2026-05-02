@@ -19,7 +19,6 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
   "links": [
     {
       "asDropdown": false,
@@ -68,7 +67,6 @@
         "type": "grafana-postgresql-datasource",
         "uid": "TeslaMate"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -79,6 +77,9 @@
             "cellOptions": {
               "type": "auto"
             },
+            "footer": {
+              "reducers": []
+            },
             "inspect": false
           },
           "mappings": [],
@@ -87,7 +88,7 @@
             "steps": [
               {
                 "color": "green",
-                "value": null
+                "value": 0
               },
               {
                 "color": "red",
@@ -107,14 +108,6 @@
       "id": 25,
       "options": {
         "cellHeight": "sm",
-        "footer": {
-          "countRows": false,
-          "fields": "",
-          "reducer": [
-            "sum"
-          ],
-          "show": false
-        },
         "showHeader": true,
         "sortBy": [
           {
@@ -123,7 +116,7 @@
           }
         ]
       },
-      "pluginVersion": "11.5.2",
+      "pluginVersion": "12.4.0",
       "targets": [
         {
           "datasource": {
@@ -175,7 +168,6 @@
         "type": "datasource",
         "uid": "-- Dashboard --"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -187,6 +179,9 @@
               "mode": "basic",
               "type": "color-background"
             },
+            "footer": {
+              "reducers": []
+            },
             "inspect": false,
             "width": 65
           },
@@ -197,7 +192,7 @@
             "steps": [
               {
                 "color": "transparent",
-                "value": null
+                "value": 0
               },
               {
                 "color": "#399e2f",
@@ -309,7 +304,7 @@
         ]
       },
       "gridPos": {
-        "h": 16,
+        "h": 17,
         "w": 12,
         "x": 0,
         "y": 2
@@ -317,14 +312,6 @@
       "id": 26,
       "options": {
         "cellHeight": "sm",
-        "footer": {
-          "countRows": false,
-          "fields": "",
-          "reducer": [
-            "last"
-          ],
-          "show": false
-        },
         "showHeader": true,
         "sortBy": [
           {
@@ -333,7 +320,7 @@
           }
         ]
       },
-      "pluginVersion": "11.5.2",
+      "pluginVersion": "12.4.0",
       "targets": [
         {
           "datasource": {
@@ -387,6 +374,9 @@
               "type": "color-background"
             },
             "filterable": false,
+            "footer": {
+              "reducers": []
+            },
             "inspect": false,
             "width": 65
           },
@@ -396,7 +386,7 @@
             "steps": [
               {
                 "color": "transparent",
-                "value": null
+                "value": 0
               },
               {
                 "color": "#7a0056",
@@ -509,7 +499,7 @@
         ]
       },
       "gridPos": {
-        "h": 16,
+        "h": 17,
         "w": 12,
         "x": 12,
         "y": 2
@@ -517,14 +507,6 @@
       "id": 15,
       "options": {
         "cellHeight": "sm",
-        "footer": {
-          "countRows": false,
-          "fields": "",
-          "reducer": [
-            "last"
-          ],
-          "show": false
-        },
         "showHeader": true,
         "sortBy": [
           {
@@ -533,7 +515,7 @@
           }
         ]
       },
-      "pluginVersion": "11.5.2",
+      "pluginVersion": "12.4.0",
       "targets": [
         {
           "datasource": {
@@ -578,6 +560,965 @@
       "fieldConfig": {
         "defaults": {
           "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "axisSoftMax": 30,
+            "fillOpacity": 100,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 0,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 1,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#5747ff",
+                "value": 0
+              },
+              {
+                "color": "#3a63fe",
+                "value": -25
+              },
+              {
+                "color": "#2c77f6",
+                "value": -20
+              },
+              {
+                "color": "#3b88e9",
+                "value": -15
+              },
+              {
+                "color": "#5696da",
+                "value": -10
+              },
+              {
+                "color": "#76a1c9",
+                "value": -5
+              },
+              {
+                "color": "#9facb0",
+                "value": 0
+              },
+              {
+                "color": "#c3b584",
+                "value": 5
+              },
+              {
+                "color": "#c09945",
+                "value": 10
+              },
+              {
+                "color": "#bd8533",
+                "value": 15
+              },
+              {
+                "color": "#bb7025",
+                "value": 20
+              },
+              {
+                "color": "#b8591b",
+                "value": 25
+              },
+              {
+                "color": "#b53f18",
+                "value": 30
+              },
+              {
+                "color": "#b01919",
+                "value": 35
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "temperature"
+            },
+            "properties": [
+              {
+                "id": "decimals",
+                "value": 0
+              },
+              {
+                "id": "displayName",
+                "value": "Temperature  º$temp_unit"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "temperature_consumption (sum)"
+            },
+            "properties": [
+              {
+                "id": "decimals",
+                "value": 0
+              },
+              {
+                "id": "displayName",
+                "value": "Consumtion"
+              },
+              {
+                "id": "displayName",
+                "value": "Consumption Wh/$length_unit"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 15,
+        "w": 6,
+        "x": 0,
+        "y": 19
+      },
+      "id": 16,
+      "options": {
+        "barRadius": 0.1,
+        "barWidth": 0.7,
+        "colorByField": "temperature",
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "orientation": "vertical",
+        "showValue": "never",
+        "stacking": "none",
+        "text": {
+          "valueSize": 23
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "maxHeight": 600,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xField": "temperature",
+        "xTickLabelRotation": -45,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "12.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 25,
+          "refId": "A"
+        }
+      ],
+      "title": "Consumption by Temperature (º$temp_unit)",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "temperature_consumption",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "at_temperature_percentage"
+                }
+              },
+              "operator": "*",
+              "right": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "consumption"
+                }
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "groupBy",
+          "options": {
+            "fields": {
+              "consumption": {
+                "aggregations": [
+                  "mean"
+                ]
+              },
+              "range": {
+                "aggregations": []
+              },
+              "temperature": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "temperature_consumption": {
+                "aggregations": [
+                  "sum"
+                ],
+                "operation": "aggregate"
+              }
+            }
+          }
+        }
+      ],
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 1,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#5747ff",
+                "value": 0
+              },
+              {
+                "color": "#3a63fe",
+                "value": -25
+              },
+              {
+                "color": "#2c77f6",
+                "value": -20
+              },
+              {
+                "color": "#3b88e9",
+                "value": -15
+              },
+              {
+                "color": "#5696da",
+                "value": -10
+              },
+              {
+                "color": "#76a1c9",
+                "value": -5
+              },
+              {
+                "color": "#9facb0",
+                "value": 0
+              },
+              {
+                "color": "#c3b584",
+                "value": 5
+              },
+              {
+                "color": "#c09945",
+                "value": 10
+              },
+              {
+                "color": "#bd8533",
+                "value": 15
+              },
+              {
+                "color": "#bb7025",
+                "value": 20
+              },
+              {
+                "color": "#b8591b",
+                "value": 25
+              },
+              {
+                "color": "#b53f18",
+                "value": 30
+              },
+              {
+                "color": "#b01919",
+                "value": 35
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "speed"
+            },
+            "properties": [
+              {
+                "id": "decimals",
+                "value": 0
+              },
+              {
+                "id": "displayName",
+                "value": "Speed $length_unit/h"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "speed_consumption (sum)"
+            },
+            "properties": [
+              {
+                "id": "decimals",
+                "value": 0
+              },
+              {
+                "id": "displayName",
+                "value": "Consumtion"
+              },
+              {
+                "id": "displayName",
+                "value": "Consumption Wh/$length_unit"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 15,
+        "w": 6,
+        "x": 6,
+        "y": 19
+      },
+      "id": 27,
+      "options": {
+        "barRadius": 0.1,
+        "barWidth": 0.7,
+        "colorByField": "speed",
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "orientation": "vertical",
+        "showValue": "never",
+        "stacking": "none",
+        "text": {
+          "valueSize": 23
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xField": "speed",
+        "xTickLabelRotation": -45,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "12.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 25,
+          "refId": "A"
+        }
+      ],
+      "title": "Consumption by Speed ($length_unit/h)",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "speed_consumption",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "at_speed_percentage"
+                }
+              },
+              "operator": "*",
+              "right": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "consumption"
+                }
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "groupBy",
+          "options": {
+            "fields": {
+              "consumption": {
+                "aggregations": [
+                  "mean"
+                ]
+              },
+              "range": {
+                "aggregations": []
+              },
+              "speed": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "speed_consumption": {
+                "aggregations": [
+                  "sum"
+                ],
+                "operation": "aggregate"
+              },
+              "temperature": {
+                "aggregations": []
+              },
+              "temperature_consumption": {
+                "aggregations": [
+                  "sum"
+                ],
+                "operation": "aggregate"
+              }
+            }
+          }
+        },
+        {
+          "id": "sortBy",
+          "options": {
+            "fields": {},
+            "sort": [
+              {
+                "field": "speed"
+              }
+            ]
+          }
+        }
+      ],
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#37872D",
+            "mode": "continuous-GrYlRd"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 100,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 0,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 0,
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#5747ff",
+                "value": 0
+              },
+              {
+                "color": "#3a63fe",
+                "value": -25
+              },
+              {
+                "color": "#2c77f6",
+                "value": -20
+              },
+              {
+                "color": "#3b88e9",
+                "value": -15
+              },
+              {
+                "color": "#5696da",
+                "value": -10
+              },
+              {
+                "color": "#76a1c9",
+                "value": -5
+              },
+              {
+                "color": "#9facb0",
+                "value": 0
+              },
+              {
+                "color": "#c3b584",
+                "value": 5
+              },
+              {
+                "color": "#c09945",
+                "value": 10
+              },
+              {
+                "color": "#bd8533",
+                "value": 15
+              },
+              {
+                "color": "#bb7025",
+                "value": 20
+              },
+              {
+                "color": "#b8591b",
+                "value": 25
+              },
+              {
+                "color": "#b53f18",
+                "value": 30
+              },
+              {
+                "color": "#b01919",
+                "value": 35
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "range * at_temperature_percentage (sum)"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Range ($length_unit)"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "temperature"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Temperature º$temp_unitº"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 15,
+        "w": 6,
+        "x": 12,
+        "y": 19
+      },
+      "id": 22,
+      "options": {
+        "barRadius": 0.1,
+        "barWidth": 0.7,
+        "colorByField": "temperature",
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "orientation": "vertical",
+        "showValue": "never",
+        "stacking": "none",
+        "text": {
+          "valueSize": 23
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "maxHeight": 600,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xField": "temperature",
+        "xTickLabelRotation": -45,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "12.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 25,
+          "refId": "A"
+        }
+      ],
+      "title": "Range ($length_unit) by Temperature (º$temp_unit)",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "range"
+                }
+              },
+              "operator": "*",
+              "right": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "at_temperature_percentage"
+                }
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": false
+          }
+        },
+        {
+          "id": "groupBy",
+          "options": {
+            "fields": {
+              "range * at_temperature_percentage": {
+                "aggregations": [
+                  "sum"
+                ],
+                "operation": "aggregate"
+              },
+              "temperature": {
+                "aggregations": [],
+                "operation": "groupby"
+              }
+            }
+          }
+        }
+      ],
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#37872D",
+            "mode": "continuous-GrYlRd"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 100,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 0,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 0,
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#5747ff",
+                "value": 0
+              },
+              {
+                "color": "#3a63fe",
+                "value": -25
+              },
+              {
+                "color": "#2c77f6",
+                "value": -20
+              },
+              {
+                "color": "#3b88e9",
+                "value": -15
+              },
+              {
+                "color": "#5696da",
+                "value": -10
+              },
+              {
+                "color": "#76a1c9",
+                "value": -5
+              },
+              {
+                "color": "#9facb0",
+                "value": 0
+              },
+              {
+                "color": "#c3b584",
+                "value": 5
+              },
+              {
+                "color": "#c09945",
+                "value": 10
+              },
+              {
+                "color": "#bd8533",
+                "value": 15
+              },
+              {
+                "color": "#bb7025",
+                "value": 20
+              },
+              {
+                "color": "#b8591b",
+                "value": 25
+              },
+              {
+                "color": "#b53f18",
+                "value": 30
+              },
+              {
+                "color": "#b01919",
+                "value": 35
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "range * at_temperature_percentage (sum)"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Range ($length_unit)"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "temperature"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Temperature º$temp_unitº"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 15,
+        "w": 6,
+        "x": 18,
+        "y": 19
+      },
+      "id": 28,
+      "options": {
+        "barRadius": 0.1,
+        "barWidth": 0.7,
+        "colorByField": "speed",
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "orientation": "vertical",
+        "showValue": "never",
+        "stacking": "none",
+        "text": {
+          "valueSize": 23
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "maxHeight": 600,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xField": "speed",
+        "xTickLabelRotation": -45,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "12.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 25,
+          "refId": "A"
+        }
+      ],
+      "title": "Range ($length_unit) by Speed ($length_unit/h)",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "range"
+                }
+              },
+              "operator": "*",
+              "right": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "at_speed_percentage"
+                }
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": false
+          }
+        },
+        {
+          "id": "groupBy",
+          "options": {
+            "fields": {
+              "range * at_speed_percentage": {
+                "aggregations": [
+                  "sum"
+                ],
+                "operation": "aggregate"
+              },
+              "range * at_temperature_percentage": {
+                "aggregations": [
+                  "sum"
+                ],
+                "operation": "aggregate"
+              },
+              "speed": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "temperature": {
+                "aggregations": []
+              }
+            }
+          }
+        },
+        {
+          "id": "sortBy",
+          "options": {
+            "fields": {},
+            "sort": [
+              {
+                "field": "speed"
+              }
+            ]
+          }
+        }
+      ],
+      "type": "barchart"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 34
+      },
+      "id": 19,
+      "panels": [],
+      "title": "Distance Related Statistics",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
             "mode": "thresholds"
           },
           "custom": {
@@ -585,6 +1526,9 @@
             "cellOptions": {
               "mode": "basic",
               "type": "color-background"
+            },
+            "footer": {
+              "reducers": []
             },
             "inspect": false,
             "width": 65
@@ -596,7 +1540,7 @@
             "steps": [
               {
                 "color": "#303036",
-                "value": null
+                "value": 0
               },
               {
                 "color": "#333348",
@@ -718,22 +1662,14 @@
         ]
       },
       "gridPos": {
-        "h": 12,
+        "h": 17,
         "w": 12,
         "x": 0,
-        "y": 34
+        "y": 35
       },
       "id": 24,
       "options": {
         "cellHeight": "sm",
-        "footer": {
-          "countRows": false,
-          "fields": "",
-          "reducer": [
-            "last"
-          ],
-          "show": false
-        },
         "showHeader": true,
         "sortBy": [
           {
@@ -742,7 +1678,7 @@
           }
         ]
       },
-      "pluginVersion": "11.5.2",
+      "pluginVersion": "12.4.0",
       "targets": [
         {
           "datasource": {
@@ -784,7 +1720,6 @@
         "type": "datasource",
         "uid": "-- Dashboard --"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -796,7 +1731,6 @@
             "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
-            "axisSoftMax": 30,
             "fillOpacity": 100,
             "gradientMode": "none",
             "hideFrom": {
@@ -812,973 +1746,14 @@
               "mode": "off"
             }
           },
-          "decimals": 1,
+          "decimals": 0,
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
                 "color": "#5747ff",
-                "value": null
-              },
-              {
-                "color": "#3a63fe",
-                "value": -25
-              },
-              {
-                "color": "#2c77f6",
-                "value": -20
-              },
-              {
-                "color": "#3b88e9",
-                "value": -15
-              },
-              {
-                "color": "#5696da",
-                "value": -10
-              },
-              {
-                "color": "#76a1c9",
-                "value": -5
-              },
-              {
-                "color": "#9facb0",
                 "value": 0
-              },
-              {
-                "color": "#c3b584",
-                "value": 5
-              },
-              {
-                "color": "#c09945",
-                "value": 10
-              },
-              {
-                "color": "#bd8533",
-                "value": 15
-              },
-              {
-                "color": "#bb7025",
-                "value": 20
-              },
-              {
-                "color": "#b8591b",
-                "value": 25
-              },
-              {
-                "color": "#b53f18",
-                "value": 30
-              },
-              {
-                "color": "#b01919",
-                "value": 35
-              }
-            ]
-          }
-        },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "temperature"
-            },
-            "properties": [
-              {
-                "id": "decimals",
-                "value": 0
-              },
-              {
-                "id": "displayName",
-                "value": "Temperature  º$temp_unit"
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "temperature_consumption (sum)"
-            },
-            "properties": [
-              {
-                "id": "decimals",
-                "value": 0
-              },
-              {
-                "id": "displayName",
-                "value": "Consumtion"
-              },
-              {
-                "id": "displayName",
-                "value": "Consumption Wh/$length_unit"
-              }
-            ]
-          }
-        ]
-      },
-      "gridPos": {
-        "h": 15,
-        "w": 6,
-        "x": 0,
-        "y": 18
-      },
-      "id": 16,
-      "options": {
-        "barRadius": 0.1,
-        "barWidth": 0.7,
-        "colorByField": "temperature",
-        "fullHighlight": false,
-        "groupWidth": 0.7,
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom",
-          "showLegend": false
-        },
-        "orientation": "vertical",
-        "showValue": "never",
-        "stacking": "none",
-        "text": {
-          "valueSize": 23
-        },
-        "tooltip": {
-          "hideZeros": false,
-          "maxHeight": 600,
-          "mode": "single",
-          "sort": "none"
-        },
-        "xField": "temperature",
-        "xTickLabelRotation": -45,
-        "xTickLabelSpacing": 0
-      },
-      "pluginVersion": "11.5.2",
-      "targets": [
-        {
-          "datasource": {
-            "type": "datasource",
-            "uid": "-- Dashboard --"
-          },
-          "panelId": 25,
-          "refId": "A"
-        }
-      ],
-      "title": "Consumption by Temperature (º$temp_unit)",
-      "transformations": [
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "temperature_consumption",
-            "binary": {
-              "left": {
-                "matcher": {
-                  "id": "byName",
-                  "options": "at_temperature_percentage"
-                }
-              },
-              "operator": "*",
-              "right": {
-                "matcher": {
-                  "id": "byName",
-                  "options": "consumption"
-                }
-              }
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "groupBy",
-          "options": {
-            "fields": {
-              "consumption": {
-                "aggregations": [
-                  "mean"
-                ]
-              },
-              "range": {
-                "aggregations": []
-              },
-              "temperature": {
-                "aggregations": [],
-                "operation": "groupby"
-              },
-              "temperature_consumption": {
-                "aggregations": [
-                  "sum"
-                ],
-                "operation": "aggregate"
-              }
-            }
-          }
-        }
-      ],
-      "type": "barchart"
-    },
-    {
-      "datasource": {
-        "type": "datasource",
-        "uid": "-- Dashboard --"
-      },
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "fixedColor": "#37872D",
-            "mode": "continuous-GrYlRd"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "fillOpacity": 100,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "lineWidth": 0,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "decimals": 0,
-          "mappings": [],
-          "min": 0,
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "#5747ff"
-              },
-              {
-                "color": "#3a63fe",
-                "value": -25
-              },
-              {
-                "color": "#2c77f6",
-                "value": -20
-              },
-              {
-                "color": "#3b88e9",
-                "value": -15
-              },
-              {
-                "color": "#5696da",
-                "value": -10
-              },
-              {
-                "color": "#76a1c9",
-                "value": -5
-              },
-              {
-                "color": "#9facb0",
-                "value": 0
-              },
-              {
-                "color": "#c3b584",
-                "value": 5
-              },
-              {
-                "color": "#c09945",
-                "value": 10
-              },
-              {
-                "color": "#bd8533",
-                "value": 15
-              },
-              {
-                "color": "#bb7025",
-                "value": 20
-              },
-              {
-                "color": "#b8591b",
-                "value": 25
-              },
-              {
-                "color": "#b53f18",
-                "value": 30
-              },
-              {
-                "color": "#b01919",
-                "value": 35
-              }
-            ]
-          }
-        },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "range * at_temperature_percentage (sum)"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Range ($length_unit)"
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "temperature"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Temperature º$temp_unitº"
-              }
-            ]
-          }
-        ]
-      },
-      "gridPos": {
-        "h": 15,
-        "w": 6,
-        "x": 18,
-        "y": 18
-      },
-      "id": 28,
-      "options": {
-        "barRadius": 0.1,
-        "barWidth": 0.7,
-        "colorByField": "speed",
-        "fullHighlight": false,
-        "groupWidth": 0.7,
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom",
-          "showLegend": false
-        },
-        "orientation": "vertical",
-        "showValue": "never",
-        "stacking": "none",
-        "text": {
-          "valueSize": 23
-        },
-        "tooltip": {
-          "hideZeros": false,
-          "maxHeight": 600,
-          "mode": "single",
-          "sort": "none"
-        },
-        "xField": "speed",
-        "xTickLabelRotation": -45,
-        "xTickLabelSpacing": 0
-      },
-      "pluginVersion": "12.0.2",
-      "targets": [
-        {
-          "datasource": {
-            "type": "datasource",
-            "uid": "-- Dashboard --"
-          },
-          "panelId": 25,
-          "refId": "A"
-        }
-      ],
-      "title": "Range ($length_unit) by Speed ($length_unit/h)",
-      "transformations": [
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "",
-            "binary": {
-              "left": {
-                "matcher": {
-                  "id": "byName",
-                  "options": "range"
-                }
-              },
-              "operator": "*",
-              "right": {
-                "matcher": {
-                  "id": "byName",
-                  "options": "at_speed_percentage"
-                }
-              }
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            },
-            "replaceFields": false
-          }
-        },
-        {
-          "id": "groupBy",
-          "options": {
-            "fields": {
-              "range * at_speed_percentage": {
-                "aggregations": [
-                  "sum"
-                ],
-                "operation": "aggregate"
-              },
-              "range * at_temperature_percentage": {
-                "aggregations": [
-                  "sum"
-                ],
-                "operation": "aggregate"
-              },
-              "speed": {
-                "aggregations": [],
-                "operation": "groupby"
-              },
-              "temperature": {
-                "aggregations": []
-              }
-            }
-          }
-        },
-        {
-          "id": "sortBy",
-          "options": {
-            "fields": {},
-            "sort": [
-              {
-                "field": "speed"
-              }
-            ]
-          }
-        }
-      ],
-      "type": "barchart"
-    },
-    {
-      "datasource": {
-        "type": "datasource",
-        "uid": "-- Dashboard --"
-      },
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "continuous-GrYlRd"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "fillOpacity": 80,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "lineWidth": 1,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "decimals": 1,
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "#5747ff"
-              },
-              {
-                "color": "#3a63fe",
-                "value": -25
-              },
-              {
-                "color": "#2c77f6",
-                "value": -20
-              },
-              {
-                "color": "#3b88e9",
-                "value": -15
-              },
-              {
-                "color": "#5696da",
-                "value": -10
-              },
-              {
-                "color": "#76a1c9",
-                "value": -5
-              },
-              {
-                "color": "#9facb0",
-                "value": 0
-              },
-              {
-                "color": "#c3b584",
-                "value": 5
-              },
-              {
-                "color": "#c09945",
-                "value": 10
-              },
-              {
-                "color": "#bd8533",
-                "value": 15
-              },
-              {
-                "color": "#bb7025",
-                "value": 20
-              },
-              {
-                "color": "#b8591b",
-                "value": 25
-              },
-              {
-                "color": "#b53f18",
-                "value": 30
-              },
-              {
-                "color": "#b01919",
-                "value": 35
-              }
-            ]
-          }
-        },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "speed"
-            },
-            "properties": [
-              {
-                "id": "decimals",
-                "value": 0
-              },
-              {
-                "id": "displayName",
-                "value": "Speed $length_unit/h"
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "speed_consumption (sum)"
-            },
-            "properties": [
-              {
-                "id": "decimals",
-                "value": 0
-              },
-              {
-                "id": "displayName",
-                "value": "Consumtion"
-              },
-              {
-                "id": "displayName",
-                "value": "Consumption Wh/$length_unit"
-              }
-            ]
-          }
-        ]
-      },
-      "gridPos": {
-        "h": 15,
-        "w": 6,
-        "x": 6,
-        "y": 18
-      },
-      "id": 27,
-      "options": {
-        "barRadius": 0.1,
-        "barWidth": 0.7,
-        "colorByField": "speed",
-        "fullHighlight": false,
-        "groupWidth": 0.7,
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom",
-          "showLegend": false
-        },
-        "orientation": "vertical",
-        "showValue": "never",
-        "stacking": "none",
-        "text": {
-          "valueSize": 23
-        },
-        "tooltip": {
-          "hideZeros": false,
-          "mode": "single",
-          "sort": "none"
-        },
-        "xField": "speed",
-        "xTickLabelRotation": -45,
-        "xTickLabelSpacing": 0
-      },
-      "pluginVersion": "12.0.2",
-      "targets": [
-        {
-          "datasource": {
-            "type": "datasource",
-            "uid": "-- Dashboard --"
-          },
-          "panelId": 25,
-          "refId": "A"
-        }
-      ],
-      "title": "Consumption by Speed ($length_unit/h)",
-      "transformations": [
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "speed_consumption",
-            "binary": {
-              "left": {
-                "matcher": {
-                  "id": "byName",
-                  "options": "at_speed_percentage"
-                }
-              },
-              "operator": "*",
-              "right": {
-                "matcher": {
-                  "id": "byName",
-                  "options": "consumption"
-                }
-              }
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "groupBy",
-          "options": {
-            "fields": {
-              "consumption": {
-                "aggregations": [
-                  "mean"
-                ]
-              },
-              "range": {
-                "aggregations": []
-              },
-              "speed": {
-                "aggregations": [],
-                "operation": "groupby"
-              },
-              "speed_consumption": {
-                "aggregations": [
-                  "sum"
-                ],
-                "operation": "aggregate"
-              },
-              "temperature": {
-                "aggregations": []
-              },
-              "temperature_consumption": {
-                "aggregations": [
-                  "sum"
-                ],
-                "operation": "aggregate"
-              }
-            }
-          }
-        },
-        {
-          "id": "sortBy",
-          "options": {
-            "fields": {},
-            "sort": [
-              {
-                "field": "speed"
-              }
-            ]
-          }
-        }
-      ],
-      "type": "barchart"
-    },
-    {
-      "datasource": {
-        "type": "datasource",
-        "uid": "-- Dashboard --"
-      },
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "fixedColor": "#37872D",
-            "mode": "continuous-GrYlRd"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "fillOpacity": 100,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "lineWidth": 0,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "decimals": 0,
-          "mappings": [],
-          "min": 0,
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "#5747ff",
-                "value": null
-              },
-              {
-                "color": "#3a63fe",
-                "value": -25
-              },
-              {
-                "color": "#2c77f6",
-                "value": -20
-              },
-              {
-                "color": "#3b88e9",
-                "value": -15
-              },
-              {
-                "color": "#5696da",
-                "value": -10
-              },
-              {
-                "color": "#76a1c9",
-                "value": -5
-              },
-              {
-                "color": "#9facb0",
-                "value": 0
-              },
-              {
-                "color": "#c3b584",
-                "value": 5
-              },
-              {
-                "color": "#c09945",
-                "value": 10
-              },
-              {
-                "color": "#bd8533",
-                "value": 15
-              },
-              {
-                "color": "#bb7025",
-                "value": 20
-              },
-              {
-                "color": "#b8591b",
-                "value": 25
-              },
-              {
-                "color": "#b53f18",
-                "value": 30
-              },
-              {
-                "color": "#b01919",
-                "value": 35
-              }
-            ]
-          }
-        },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "range * at_temperature_percentage (sum)"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Range ($length_unit)"
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "temperature"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Temperature º$temp_unitº"
-              }
-            ]
-          }
-        ]
-      },
-      "gridPos": {
-        "h": 15,
-        "w": 6,
-        "x": 12,
-        "y": 18
-      },
-      "id": 22,
-      "options": {
-        "barRadius": 0.1,
-        "barWidth": 0.7,
-        "colorByField": "temperature",
-        "fullHighlight": false,
-        "groupWidth": 0.7,
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom",
-          "showLegend": false
-        },
-        "orientation": "vertical",
-        "showValue": "never",
-        "stacking": "none",
-        "text": {
-          "valueSize": 23
-        },
-        "tooltip": {
-          "hideZeros": false,
-          "maxHeight": 600,
-          "mode": "single",
-          "sort": "none"
-        },
-        "xField": "temperature",
-        "xTickLabelRotation": -45,
-        "xTickLabelSpacing": 0
-      },
-      "pluginVersion": "11.5.2",
-      "targets": [
-        {
-          "datasource": {
-            "type": "datasource",
-            "uid": "-- Dashboard --"
-          },
-          "panelId": 25,
-          "refId": "A"
-        }
-      ],
-      "title": "Range ($length_unit) by Temperature (º$temp_unit)",
-      "transformations": [
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "",
-            "binary": {
-              "left": {
-                "matcher": {
-                  "id": "byName",
-                  "options": "range"
-                }
-              },
-              "operator": "*",
-              "right": {
-                "matcher": {
-                  "id": "byName",
-                  "options": "at_temperature_percentage"
-                }
-              }
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            },
-            "replaceFields": false
-          }
-        },
-        {
-          "id": "groupBy",
-          "options": {
-            "fields": {
-              "range * at_temperature_percentage": {
-                "aggregations": [
-                  "sum"
-                ],
-                "operation": "aggregate"
-              },
-              "temperature": {
-                "aggregations": [],
-                "operation": "groupby"
-              }
-            }
-          }
-        }
-      ],
-      "type": "barchart"
-    },
-    {
-      "collapsed": false,
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 33
-      },
-      "id": 19,
-      "panels": [],
-      "title": "Distance Related Statistics",
-      "type": "row"
-    },
-    {
-      "datasource": {
-        "type": "datasource",
-        "uid": "-- Dashboard --"
-      },
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "continuous-GrYlRd"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "fillOpacity": 100,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "lineWidth": 0,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "decimals": 0,
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "#5747ff"
               },
               {
                 "color": "#3a63fe",
@@ -1875,10 +1850,10 @@
         ]
       },
       "gridPos": {
-        "h": 12,
+        "h": 17,
         "w": 6,
         "x": 12,
-        "y": 34
+        "y": 35
       },
       "id": 14,
       "options": {
@@ -1909,7 +1884,7 @@
         "xTickLabelRotation": -45,
         "xTickLabelSpacing": 0
       },
-      "pluginVersion": "11.5.2",
+      "pluginVersion": "12.4.0",
       "targets": [
         {
           "datasource": {
@@ -1947,7 +1922,6 @@
         "type": "datasource",
         "uid": "-- Dashboard --"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1981,7 +1955,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": 0
               }
             ]
           },
@@ -2023,10 +1998,10 @@
         ]
       },
       "gridPos": {
-        "h": 12,
+        "h": 17,
         "w": 6,
         "x": 18,
-        "y": 34
+        "y": 35
       },
       "id": 11,
       "options": {
@@ -2057,7 +2032,7 @@
         "xTickLabelRotation": -45,
         "xTickLabelSpacing": 0
       },
-      "pluginVersion": "11.5.2",
+      "pluginVersion": "12.4.0",
       "targets": [
         {
           "datasource": {
@@ -2096,7 +2071,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 46
+        "y": 52
       },
       "id": 21,
       "panels": [],
@@ -2108,7 +2083,6 @@
         "type": "grafana-postgresql-datasource",
         "uid": "TeslaMate"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -2142,7 +2116,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": 0
               }
             ]
           }
@@ -2204,7 +2179,7 @@
         "h": 13,
         "w": 12,
         "x": 0,
-        "y": 47
+        "y": 53
       },
       "id": 9,
       "options": {
@@ -2264,7 +2239,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "11.5.2",
+      "pluginVersion": "12.4.0",
       "targets": [
         {
           "datasource": {
@@ -2273,7 +2248,6 @@
           },
           "editorMode": "code",
           "format": "table",
-          "hide": false,
           "rawQuery": true,
           "rawSql": "SELECT \n  convert_celsius(temperature, '$temp_unit') AS temperature, AVG(consumption) AS consumption\nFROM (\n  SELECT \n    ROUND(outside_temp_avg/($temperature_step*1.0)) * $temperature_step AS temperature, \n    (NULLIF(GREATEST(start_rated_range_km - end_rated_range_km, 0), 0) * cars.efficiency * (1000 / convert_km(distance::numeric, '$length_unit'))) AS consumption\n  FROM \n    drives JOIN cars ON drives.car_id = cars.id WHERE drives.car_id = $car_id AND convert_km(distance::numeric, '$length_unit') BETWEEN 1 AND 20\n) S1 GROUP BY temperature ORDER BY temperature ASC\n",
           "refId": "Short 1-20",
@@ -2302,7 +2276,6 @@
           },
           "editorMode": "code",
           "format": "table",
-          "hide": false,
           "rawQuery": true,
           "rawSql": "SELECT \n  convert_celsius(temperature, '$temp_unit') AS longtemp, AVG(consumption) AS longconsumption\nfrom (\n  SELECT \n    ROUND(outside_temp_avg/($temperature_step*1.0)) * $temperature_step AS temperature, \n    (NULLIF(GREATEST(start_rated_range_km - end_rated_range_km, 0), 0)*cars.efficiency * (1000 / convert_km(distance::numeric, '$length_unit'))) AS consumption\n  FROM \n    drives JOIN cars ON drives.car_id = cars.id WHERE drives.car_id = $car_id AND convert_km(distance::numeric, '$length_unit') > 20 \n) S1 GROUP BY temperature ORDER BY temperature ASC",
           "refId": "Long > 20",
@@ -2367,6 +2340,7 @@
               "type": "linear"
             },
             "showPoints": "auto",
+            "showValues": false,
             "spanNulls": false,
             "stacking": {
               "group": "A",
@@ -2382,7 +2356,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "dark-blue"
+                "color": "dark-blue",
+                "value": 0
               },
               {
                 "color": "#EAB839",
@@ -2497,7 +2472,7 @@
         "h": 13,
         "w": 12,
         "x": 12,
-        "y": 47
+        "y": 53
       },
       "id": 23,
       "options": {
@@ -2514,7 +2489,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "11.5.2",
+      "pluginVersion": "12.4.0",
       "targets": [
         {
           "datasource": {
@@ -2551,7 +2526,6 @@
           },
           "editorMode": "code",
           "format": "table",
-          "hide": false,
           "rawQuery": true,
           "rawSql": "SELECT \n  start_date::date as time,\n  ROUND(convert_celsius(temperature, '$temp_unit')) AS temperature_$temp_unit\nFROM (\n  SELECT \n    start_date,\n    AVG(temperature) OVER(ORDER BY start_date ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING) AS temperature\n  FROM (\n    SELECT \n      start_date, avg(temperature) as temperature\n    FROM \n      (\n        SELECT \n          to_char(start_date, 'YYYY-MM-DD') as start_date,\n          --(end_km-start_km) as distance,\n          outside_temp_avg as temperature\n        FROM \n          drives join cars on drives.car_id = cars.id  where drives.car_id = $car_id\n      ) S1 group by start_date order by start_date asc\n  ) S2 group by start_date, temperature order by start_date\n) S3 order by start_date",
           "refId": "B",
@@ -2580,14 +2554,17 @@
   ],
   "preload": false,
   "refresh": "",
-  "schemaVersion": 40,
+  "schemaVersion": 42,
   "tags": [
     "TeslamateCustomDashboards"
   ],
   "templating": {
     "list": [
       {
-        "current": {},
+        "current": {
+          "text": "Maximus",
+          "value": "1"
+        },
         "datasource": {
           "type": "grafana-postgresql-datasource",
           "uid": "TeslaMate"
@@ -2600,10 +2577,14 @@
         "query": "SELECT\n    id as __value,\n    CASE WHEN COUNT(id) OVER (PARTITION BY name) > 1 AND name IS NOT NULL THEN CONCAT(name, ' - ', RIGHT(vin, 6)) ELSE COALESCE(name, CONCAT('VIN ', vin)) end as __text \nFROM cars\nORDER BY display_priority ASC, name ASC, vin ASC",
         "refresh": 1,
         "regex": "",
+        "regexApplyTo": "value",
         "type": "query"
       },
       {
-        "current": {},
+        "current": {
+          "text": "58.470371193877554",
+          "value": "58.470371193877554"
+        },
         "datasource": {
           "type": "grafana-postgresql-datasource",
           "uid": "TeslaMate"
@@ -2616,37 +2597,21 @@
         "query": "WITH Aux AS\n(SELECT car_id,\n\t\tCOALESCE(efficiency, \n\t\t(SELECT efficiency\n\t\t\tFROM cars WHERE id = $car_id) * 100) AS efficiency\n\tFROM (\n\t\tSELECT ROUND((charge_energy_added / NULLIF(end_rated_range_km - start_rated_range_km, 0))::numeric, 3) * 100 as efficiency,\n\t\t\tCOUNT(*) as count, $car_id AS car_id \n\t\tFROM charging_processes\n\t\tWHERE car_id = $car_id\n\t\t\tAND duration_min > 10\n\t\t\tAND end_battery_level <= 95\n\t\t\tAND start_rated_range_km IS NOT NULL\n\t\t\tAND end_rated_range_km IS NOT NULL\n\t\t\tAND charge_energy_added > 0\n\t\tGROUP BY 1\n\t\tORDER BY 2 DESC\n\t\tLIMIT 1\n\t) AS DerivatedEfficiency\n),\nCurrentCapacity\t AS\n(\n\tSELECT AVG(Capacity) AS Capacity\nFROM (\nSELECT \n\tc.rated_battery_range_km * aux.efficiency / c.usable_battery_level AS Capacity\n\tFROM charging_processes cp\n\t\tINNER JOIN charges c\n\t\tON c.charging_process_id = cp.id \n                INNER JOIN aux ON cp.car_id = aux.car_id\n\tWHERE cp.car_id = $car_id\n\t\tAND cp.end_date IS NOT NULL\n\t\tAND cp.charge_energy_added >= aux.efficiency\n\t\tAND c.usable_battery_level > 0\n\t ORDER BY cp.end_date DESC LIMIT 10) AS lastCharges\n)\nSELECT Capacity FROM CurrentCapacity",
         "refresh": 1,
         "regex": "",
+        "regexApplyTo": "value",
         "type": "query"
       },
       {
-        "current": {},
+        "current": {
+          "text": "100",
+          "value": "100"
+        },
         "includeAll": false,
         "label": "Used datapoints",
         "name": "datapoints",
-        "options": [
-          {
-            "selected": true,
-            "text": "100%",
-            "value": "100"
-          },
-          {
-            "selected": false,
-            "text": "50%",
-            "value": "50"
-          },
-          {
-            "selected": false,
-            "text": "20%",
-            "value": "20"
-          },
-          {
-            "selected": false,
-            "text": "10%",
-            "value": "10"
-          }
-        ],
+        "options": [],
         "query": "100% : 100, 50% : 50, 20% : 20, 10% : 10",
-        "type": "custom"
+        "type": "custom",
+        "valuesFormat": "csv"
       },
       {
         "current": {
@@ -2656,25 +2621,10 @@
         "includeAll": false,
         "label": "Speed step",
         "name": "speed_step",
-        "options": [
-          {
-            "selected": false,
-            "text": "20",
-            "value": "20"
-          },
-          {
-            "selected": true,
-            "text": "10",
-            "value": "10"
-          },
-          {
-            "selected": false,
-            "text": "5",
-            "value": "5"
-          }
-        ],
+        "options": [],
         "query": "20, 10, 5",
-        "type": "custom"
+        "type": "custom",
+        "valuesFormat": "csv"
       },
       {
         "current": {
@@ -2684,28 +2634,16 @@
         "includeAll": false,
         "label": "Temperature step",
         "name": "temperature_step",
-        "options": [
-          {
-            "selected": false,
-            "text": "10",
-            "value": "10"
-          },
-          {
-            "selected": true,
-            "text": "5",
-            "value": "5"
-          },
-          {
-            "selected": false,
-            "text": "2.5",
-            "value": "2.5"
-          }
-        ],
+        "options": [],
         "query": "10, 5, 2.5",
-        "type": "custom"
+        "type": "custom",
+        "valuesFormat": "csv"
       },
       {
-        "current": {},
+        "current": {
+          "text": "km",
+          "value": "km"
+        },
         "datasource": {
           "type": "grafana-postgresql-datasource",
           "uid": "TeslaMate"
@@ -2718,10 +2656,14 @@
         "query": "SELECT unit_of_length FROM settings LIMIT 1",
         "refresh": 1,
         "regex": "",
+        "regexApplyTo": "value",
         "type": "query"
       },
       {
-        "current": {},
+        "current": {
+          "text": "C",
+          "value": "C"
+        },
         "datasource": {
           "type": "grafana-postgresql-datasource",
           "uid": "TeslaMate"
@@ -2734,10 +2676,14 @@
         "query": "select unit_of_temperature FROM settings LIMIT 1",
         "refresh": 1,
         "regex": "",
+        "regexApplyTo": "value",
         "type": "query"
       },
       {
-        "current": {},
+        "current": {
+          "text": "https://teslamate.infoinnova.net",
+          "value": "https://teslamate.infoinnova.net"
+        },
         "datasource": {
           "type": "grafana-postgresql-datasource",
           "uid": "TeslaMate"
@@ -2750,6 +2696,7 @@
         "query": "SELECT base_url FROM settings LIMIT 1",
         "refresh": 1,
         "regex": "",
+        "regexApplyTo": "value",
         "type": "query"
       }
     ]
@@ -2759,9 +2706,9 @@
     "to": "now"
   },
   "timepicker": {},
-  "timezone": "",
+  "timezone": "browser",
   "title": "Speed & Temperature",
   "uid": "jchm_9z40b",
-  "version": 1,
+  "version": 2,
   "weekStart": ""
 }
